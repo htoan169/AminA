@@ -1,0 +1,39 @@
+---
+title: "tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+
+This is a simple package that only translates DNA or RNA sequences innto amino acid sequences. It does not support amiguity codes. This will only work with eukaryotic nuclear genomes. 
+
+
+# Installation
+
+
+This R package can be installed directly from github using: 
+
+```{r eval=FALSE}
+install(devtools)
+library(devtools)
+install_github("htoan169/AminA", build_vignettes = T)
+library(AminA)
+
+```
+
+# Example code
+
+The code below will generate an example sequence and translation
+```{r}
+library(AminA)
+# create a DNA sequence
+data <- "atagtagtagtatccagcagcagagttagacgacg"
+
+#translate sequence
+AminA(data)
+
+
+```
